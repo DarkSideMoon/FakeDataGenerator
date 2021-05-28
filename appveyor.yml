@@ -1,0 +1,11 @@
+image: Visual Studio 2019
+
+build_script:
+  # dotnet info
+  - ps: dotnet --info
+  # Run dotnet new 
+  - ps: dotnet restore FakeDataGenerator.sln
+  - ps: dotnet build FakeDataGenerator.sln
+  - ps: dotnet test ./test/FakeDataGenerator.Tests/FakeDataGenerator.Tests.csproj
+
+version: 0.0.1.{build}

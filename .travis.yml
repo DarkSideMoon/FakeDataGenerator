@@ -1,0 +1,15 @@
+language: csharp
+dist: xenial
+sudo: required
+solution: FakeDataGenerator.sln
+mono: none
+dotnet: 5.0
+
+install:
+  - dotnet restore FakeDataGenerator.sln
+
+script:
+- dotnet --info
+- dotnet restore FakeDataGenerator.sln
+- dotnet build FakeDataGenerator.sln
+- dotnet test ./test/FakeDataGenerator.Tests/FakeDataGenerator.Tests.csproj

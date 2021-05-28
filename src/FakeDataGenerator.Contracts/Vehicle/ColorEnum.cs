@@ -1,0 +1,29 @@
+﻿namespace FakeDataGenerator.Contracts.Vehicle
+{
+    public enum ColorEnum
+    {
+        Green,
+        Yellow,
+        Blue,
+        Red,
+        Orange,
+        Grey,
+        Lime,
+        Purple,
+        Brown,
+        Pink,
+        Navy,
+        Teal,
+        Indigo,
+        Maroon,
+        Midnightblue,
+        Khaki,
+        Coral,
+        Silver,
+        Azure,
+        Blueviolet,
+        Cyan,
+        Royalblue,
+        Darkblue
+    }
+}

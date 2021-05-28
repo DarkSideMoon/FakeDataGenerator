@@ -1,0 +1,33 @@
+﻿namespace FakeDataGenerator.Contracts.Vehicle
+{
+    public enum BrandEnum
+    {
+        Skoda,
+        Volkswagen,
+        Seat,
+        Volvo,
+        Lexus,
+        Toyota,
+        Mercedes,
+        Audi,
+        BMW,
+        Ford,
+        Maserati,
+        Subaru,
+        Mazda,
+        Jaguar,
+        Hyundai,
+        Chevrolet,
+        KIA,
+        Mitsubishi,
+        Peugeot,
+        Citroën,
+        Suzuki,
+        Fiat,
+        Renault,
+        Opel,
+        Honda,
+        Nissan,
+        Infiniti
+    }
+}
