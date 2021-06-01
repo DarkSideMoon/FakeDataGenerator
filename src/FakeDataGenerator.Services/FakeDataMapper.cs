@@ -6,7 +6,8 @@ namespace FakeDataGenerator.Services
 {
     public static class FakeDataMapper
     {
-        public static Faker<Car> Car = new Faker<Car>()
+        // Default example of mapping rules for Car model
+        public static Faker<Car> DeafultCar = new Faker<Car>()
             .RuleFor(x => x.Brand, f => f.Random.Enum<BrandEnum>())
             .RuleFor(x => x.Color, f => f.Random.Enum<ColorEnum>())
             .RuleFor(x => x.EngineVolume, f => f.Random.Double(0, 5))
@@ -23,7 +24,10 @@ namespace FakeDataGenerator.Services
             .RuleFor(x => x.TransmissionBrand, f => f.Company.CompanyName())
             .RuleFor(x => x.TransmissionNumber, f => f.Commerce.ProductName());
 
+        // Ensure all properties have rules. By default, StrictMode is false
+        // Example with StrictMode = true 
         public static Faker<Book> Book = new Faker<Book>()
+            .StrictMode(true)
             .RuleFor(x => x.Id, f => f.Random.Guid());
     }
 }
