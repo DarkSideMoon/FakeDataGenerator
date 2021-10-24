@@ -4,7 +4,7 @@ namespace FakeDataGenerator.Contracts.Vehicle
 {
     public class Car
     {
-        public Guid VinCode { get; set; }
+        public string VinCode { get; set; }
 
         public string RegistrationNumber { get; set; }
 
@@ -22,16 +22,8 @@ namespace FakeDataGenerator.Contracts.Vehicle
 
         public bool IsAllWheelDrive { get; set; }
 
-        public string TransmissionBrand { get; set; }
+        public Tire Tire { get; set; }
 
-        public string TransmissionNumber { get; set; }
-
-        public TireBrandEnum TireBrand { get; set; }
-
-        public double TireWidth { get; set; }
-
-        public double TireProfile { get; set; }
-
-        public int TireDiameter { get; set; }
+        public Transmission Transmission { get; set; }
     }
 }

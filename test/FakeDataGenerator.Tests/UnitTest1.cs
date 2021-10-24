@@ -1,3 +1,4 @@
+using FakeDataGenerator.Services;
 using NUnit.Framework;
 
 namespace FakeDataGenerator.Tests

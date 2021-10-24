@@ -12,6 +12,14 @@ namespace FakeDataGenerator.Contracts.Bookshelf
 
         public string ISBN { get; set; }
 
-        public Person Author { get; set; }
+        public Genre Genre { get; set; }
+    }
+
+    public enum Genre
+    {
+        Poetry,
+        Romance,
+        Thriller,
+        Travel
     }
 }
