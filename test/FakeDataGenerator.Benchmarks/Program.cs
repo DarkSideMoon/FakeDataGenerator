@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using FakeDataGenerator.Services;
 
 namespace FakeDataGenerator.Benchmarks
 {
@@ -9,13 +10,12 @@ namespace FakeDataGenerator.Benchmarks
         {
             Console.WriteLine("Hello Bogus!");
 
-            var cars = Services.FakeDataGenerator.GenerateAdvancedCar(3);
+            var fakeGenerator = new FakeGenerator(3, "en");
+            var cars = fakeGenerator.GenerateAdvancedCar();
             var json = JsonConvert.SerializeObject(cars);
 
             Console.WriteLine(json);
             Console.ReadLine();
-
-            // Add benchmarkdotnet 
         }
     }
 }
