@@ -8,11 +8,11 @@ namespace FakeDataGenerator.Services
     [MarkdownExporter, AsciiDocExporter, HtmlExporter, CsvExporter, RPlotExporter]
     public class FakeGenerator
     {
-        [Params(100000, 500000, 1000000, 2000000, 3000000, 5000000)]
-        public int Count { get; }
+        [Params(100000, 500000, 1000000)]
+        public int Count { get; set; }
 
         [Params("en")]
-        public string Locale { get; }
+        public string Locale { get; set; }
 
         public FakeGenerator()
         {
@@ -39,7 +39,6 @@ namespace FakeDataGenerator.Services
             return generator.Generate(Count);
         }
 
-        [Benchmark]
         public void AssertConfiguration()
         {
             var generator = FakeDataMapper.AdvancedCar;

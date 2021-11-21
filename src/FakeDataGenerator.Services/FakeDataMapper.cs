@@ -38,16 +38,16 @@ namespace FakeDataGenerator.Services
                 Brand = f.PickRandom<TireBrandEnum>(),
                 Diameter = f.Random.Number(10, 100)
             })
-            .RuleFor(x => x.Transmission, f => new Transmission 
+            .RuleFor(x => x.Transmission, f => new Transmission
             {
                 Brand = f.Company.CompanyName(),
                 Number = f.Commerce.ProductName()
-            })
+            });
             // Optional: After all rules are applied finish with the following action
             // Sometimes can be logging or other helpful logic
-            .FinishWith((faker, car) => 
-            {
-                Console.WriteLine($"New car {car.VinCode} was generated successfully");
-            });
+            //.FinishWith((faker, car) => 
+            //{
+            //    Console.WriteLine($"New car {car.VinCode} was generated successfully");
+            //});
     }
 }
